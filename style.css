@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#header-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 100vh;
+
+    background-image: url("./images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner-frame {
+    height: 300px;
+    font-size: 50px;
+    font-weight: bold;
+    box-shadow: 0 0 5px crimson;
+    margin-top: 50px;
+    filter: drop-shadow(2px 2px crimson);
+}
+
+.banner-paragraph {
+    margin: 0;
+}
+
+.banner-subparagraph {
+    font-size: 20px;
+}
+
+.card-section {
+    text-align: center;
+}
+
+.card-section-title {
+    border-bottom: 2px solid burlywood;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.titles-container {
+    display: flex;
+    height: 500px;
+}

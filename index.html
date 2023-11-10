@@ -23,20 +23,36 @@
         </section>
     </header>
     <main role="main">
-        <section class="left"></section>
-        <section class="middle">
-            <h2 class="card-section-title">The alphabet</h2>
-            <h3>SeiOn</h3>
-            <section id="seion" class="card-section">
+        <section class="main-container">
+            <section class="left"></section>
+            <section class="middle">
+                <h2 class="section-title">The alphabet</h2>
+                <section class="flex-center">
+                    <button class="tab">SeiOn</button>
+                    <button class="tab">DakuOn</button>
+                    <button class="tab">YoOn</button>
+                </section>
+                <section id="seion-tab" class="hidden">
+                    <h3>SeiOn</h3>
+                    <section id="seion" class="card-section flex-center"></section>
+                </section>
+                <section id="dakuon-tab" class="hidden">
+                    <h3>DakuOn</h3>
+                    <section id="dakuon" class="card-section flex-center"></section>
+                </section>
+                <section id="yoon-tab" class="hidden">
+                    <h3>Yoon</h3>
+                    <section id="yoon" class="card-section flex-center"></section>
+                </section>
             </section>
-            <h3>DakuOn</h3>
-            <section id="dakuon" class="card-section">
-            </section>
-            <h3>Yoon</h3>
-            <section id="yoon" class="card-section">
-            </section>
+            <section class="right"></section>
         </section>
-        <section class="right"></section>
+        <section id="random">
+            <h2 class="section-title">Test your knowledge</h2>
+            <label for="letterInput">What letter is this ?</label>
+            <input type="text" name="letterInput" id="letterInput">
+            <section class="random-character-container"></section>
+        </section>
     </main>
     <footer role="contentInfo">
 

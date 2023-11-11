@@ -32,6 +32,7 @@
                     <button class="tab">DakuOn</button>
                     <button class="tab">YoOn</button>
                 </section>
+                <input type="text" name="search-input" id="search-input">
                 <section id="seion-tab" class="hidden">
                     <h3>SeiOn</h3>
                     <section id="seion" class="card-section flex-center"></section>
@@ -49,9 +50,20 @@
         </section>
         <section id="random">
             <h2 class="section-title">Test your knowledge</h2>
-            <label for="letterInput">What letter is this ?</label>
-            <input type="text" name="letterInput" id="letterInput">
+            <label for="letter-input">What letter is this ?</label><br>
+            <input type="text" name="letter-input" id="letter-input">
+            <button aria-label="check" id="check-button">Check</button>
+            <button aria-label="new" id="new-button">New character</button>
+            <p class="result"></p>
             <section class="random-character-container"></section>
+        </section>
+        <section id="sentence">
+            <h2 class="section-title">Can you build a sentence?</h2>
+            <p>Please use spaces between each character, this is not a translator page!</p>
+            <label for="sentence-input">Your sentence:</label><br>
+            <input type="text" name="sentence-input" id="sentence-input"><br><br>
+            <h3>Created sentence:</h3>
+            <p id="sentence-output"></p>
         </section>
     </main>
     <footer role="contentInfo">

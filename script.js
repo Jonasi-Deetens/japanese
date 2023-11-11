@@ -3,17 +3,30 @@ import { dakuOn } from "./collections/dakuon.js";
 import { yoOn } from "./collections/yoon.js";
 
 let openTabs = 0;
+let randomCharacter = "";
 const collections = [seiOn, dakuOn, yoOn];
 
-addTabMenuListeners();
+addListeners();
 createCards();
 
-function addTabMenuListeners() {
+function addListeners() {
     const tabs = document.querySelectorAll(".tab");
 
     tabs.forEach( tab => {
         tab.addEventListener("click", openTab);
     });
+    
+    const checkButton = document.querySelector("#check-button");
+    checkButton.addEventListener("click", compareLetters);
+
+    const newButton = document.querySelector("#new-button");
+    newButton.addEventListener("click", drawRandomCharacter);
+
+    const searchInput = document.querySelector("#search-input");
+    searchInput.addEventListener("keyup", searchCharacterEvent)
+
+    const sentenceInput = document.querySelector("#sentence-input");
+    sentenceInput.addEventListener("keyup", convertSentence)
 }
 
 function createCards() {
@@ -55,21 +68,79 @@ function clearSides() {
     katakanaSection.innerHTML = "";
 }
 
+function compareLetters() {
+    const input = document.querySelector("#letter-input");
+    const value = input.value;
+    const result = document.querySelector(".result");
+
+    if(value === randomCharacter.letter) {
+        input.style.border = "2px solid green";
+        result.textContent = "Good job! Go for the next one."
+    } else {
+        input.style.border = "2px solid red";
+        result.textContent = "Almost, the correct letter is '" + randomCharacter.letter + "'";
+    } 
+}
+
+function convertSentence() {
+    const sentence = document.querySelector("#sentence-input").value;
+    const splitSentence = sentence.split(/(\s+)/);
+
+    let characters = [];
+
+    splitSentence.forEach( word => {
+        let character = searchCharacter(word);
+        if (character !== "") characters.push(character.hiragana);
+        else characters.push(word);
+    });
+
+    let output = "";
+    characters.forEach( word => {
+        output += word;
+    });
+
+    const result = document.querySelector("#sentence-output");
+    result.textContent = output;
+}
+
 function drawRandomCharacter() {
+    const result = document.querySelector(".result");
+    result.textContent = "";
+
     const randomSection = document.querySelector(".random-character-container");
     randomSection.innerHTML = "";
 
     const randomCharacterElement = document.createElement("section");
     let randomCollection = collections[Math.floor(Math.random() * 3)];
-    console.log(Math.floor(Math.random() * (randomCollection.length - 1)));
-    let randomCharacter = randomCollection[Math.floor(Math.random() * randomCollection.length)];
+    randomCharacter = randomCollection[Math.floor(Math.random() * randomCollection.length)];
 
     const characterFrame = document.createElement("h1");
     characterFrame.classList.add("big");
-    characterFrame.textContent = randomCharacter.hiragana;
-
+    characterFrame.textContent = randomCharacter.hiragana + " - " + randomCharacter.katakana;
     randomCharacterElement.appendChild(characterFrame);
+
     randomSection.appendChild(randomCharacterElement);
+}
+
+function searchCharacter(value) {
+    let searchedCharacter = "";
+
+    collections.forEach( collection => {
+        collection.forEach( character => {
+            if (value === character.letter) searchedCharacter = character;
+        });
+    });
+
+    return searchedCharacter;
+}
+
+function searchCharacterEvent(event) {
+    const value = event.target.value;
+    
+    let character = searchCharacter(value);
+
+    if (character !== "") showCharacters(event, character);
+    else clearSides();
 }
 
 function showCharacters(event, character) {

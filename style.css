@@ -34,14 +34,32 @@ h3 {
     background-repeat: no-repeat;
 }
 
-#letterInput {
+#letter-input {
     margin: 5px 5px 5px 5px;
+}
+
+#sentence-input {
+    margin: 5px 5px 5px 5px;
+    width: 50%;
+    border: none;
+    box-shadow: 1px 1px 2px gray;
+}
+
+#sentence-input:active {
+    border: none;
 }
 
 #random {
     width: 100%;
     padding: 20px;
     background-color: var(--background-sub-color);
+}
+
+#search-input {
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 5px;
+    margin-bottom: 5px;
 }
 
 .active {

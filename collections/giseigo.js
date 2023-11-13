@@ -1,109 +1,109 @@
 const animalSounds = [
     {
         animal: "Bear",
-        sound: "Roar",
+        description: "Roar",
         hiragana: "がおー",
         katakana: "ガオー"
     },
     {
         animal: "Bee",
-        sound: "Buzz",
+        description: "Buzz",
         hiragana: "ぶーん",
         katakana: "ブーン"
     },
     {
         animal: "Bird",
-        sound: "Tweet",
+        description: "Tweet",
         hiragana: "ちゅんちゅん",
         katakana: "チゅンチゅン"
     },
     {
         animal: "Cat",
-        sound: "Meow",
+        description: "Meow",
         hiragana: "にゃん",
         katakana: "ニゃン"
     },
     {
         animal: "Chicken",
-        sound: "Cluck",
+        description: "Cluck",
         hiragana: "こけこっこ",
         katakana: "コケコっコ"
     },
     {
         animal: "Cow",
-        sound: "Moo",
+        description: "Moo",
         hiragana: "かーかー",
         katakana: "カーカー"
     },
     {
         animal: "Crow",
-        sound: "Caw",
+        description: "Caw",
         hiragana: "ぶーん",
         katakana: "ブーン"
     },
     {
         animal: "Dog",
-        sound: "Woof",
+        description: "Woof",
         hiragana: "わんわん",
         katakana: "ワンワン"
     },
     {
         animal: "Duck",
-        sound: "Quack",
+        description: "Quack",
         hiragana: "がーがー",
         katakana: "ガーガー"
     },
     {
         animal: "Fox",
-        sound: "Sort of bark",
+        description: "Sort of bark",
         hiragana: "こんこん",
         katakana: "コンコン"
     },
     {
         animal: "Frog",
-        sound: "Croak, Ribbit",
+        description: "Croak, Ribbit",
         hiragana: "げろげろ",
         katakana: "ゲロゲロ"
     },
     {
         animal: "Godzilla",
-        sound: "Roar",
+        description: "Roar",
         hiragana: "がおー",
         katakana: "ガオー"
     },
     {
         animal: "Horse",
-        sound: "Neigh",
+        description: "Neigh",
         hiragana: "ひひいん",
         katakana: "ヒヒイン"
     },
     {
         animal: "Monkey",
-        sound: "Oo oo aa aa",
+        description: "Oo oo aa aa",
         hiragana: "うきうき",
         katakana: "ウキウキ"
     },
     {
         animal: "Mouse",
-        sound: "Squeak",
+        description: "Squeak",
         hiragana: "ちゅーちゅー",
         katakana: "チゅーチゅー"
     },
     {
         animal: "Owl",
-        sound: "Hoo",
+        description: "Hoo",
         hiragana: "ほーほー",
         katakana: "ホーホー"
     },
     {
         animal: "Pig",
-        sound: "Oink",
+        description: "Oink",
         hiragana: "ぶーぶー",
         katakana: "ブーブー"
     },
     {
         animal: "Sheep",
-        sound: "Meeeh, Baa",
+        description: "Meeeh, Baa",
         hiragana: "めーめー",
         katakana: "メーメー"
     }
@@ -111,43 +111,55 @@ const animalSounds = [
 
 const humanSounds = [
     {
-        sound: "Being lectured by someone above you",
-        hiragana: "がみがみ"
+        description: "Being lectured by someone above you",
+        hiragana: "がみがみ",
+        katakana: "ガミガミ"
     },
     {
-        sound: "A cheerful, loud laugh",
-        hiragana: "あはは"
+        description: "A cheerful, loud laugh",
+        hiragana: "あはは",
+        katakana: "アハハ"
     },
     {
-        sound: "A child crying loudly",
-        hiragana: "うわーん"
+        description: "A child crying loudly",
+        hiragana: "うわーん",
+        katakana: "ウワーン"
     },
     {
-        sound: "A surprised scream or shriek",
-        hiragana: "うぎゃー"
+        description: "A surprised scream or shriek",
+        hiragana: "うぎゃー",
+        katakana: "ウギゃー"
     },
     {
-        sound: "Chuckling like you have a secret",
-        hiragana: "うふふ"
+        description: "Chuckling like you have a secret",
+        hiragana: "うふふ",
+        katakana: "ウフフ"
     },
     {
-        sound: "Chatting about frivolous things",
-        hiragana: "ぺちゃくちゃ"
+        description: "Chatting about frivolous things",
+        hiragana: "ぺちゃくちゃ",
+        katakana: "ペチゃクチゃ"
     },
     {
-        sound: "Muttering so other people can't hear you",
-        hiragana: "ごにょごにょ"
+        description: "Muttering so other people can't hear you",
+        hiragana: "ごにょごにょ",
+        katakana: "ゴニょゴニょ"
     },
     {
-        sound: "Being able to speak a foreign language fluently",
-        hiragana: "ぺらぺら"
+        description: "Being able to speak a foreign language fluently",
+        hiragana: "ぺらぺら",
+        katakana: "ペラペラ"
     },
     {
-        sound: "Clearing your throat for attention",
-        hiragana: "おほん"
+        description: "Clearing your throat for attention",
+        hiragana: "おほん",
+        katakana: "オホン"
     },
     {
-        sound: "Laughing quietly, unable to hold it in",
-        hiragana: "くすくす"
+        description: "Laughing quietly, unable to hold it in",
+        hiragana: "くすくす",
+        katakana: "クスクス"
     }
 ];
+
+export { animalSounds, humanSounds};

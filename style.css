@@ -10,6 +10,7 @@
 body {
     margin: 0;
     padding: 0;
+    position: relative;
     text-align: center;
     background-color: #ededed;
 }
@@ -23,8 +24,6 @@ li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: 16px;
-    filter: drop-shadow(1px 1px crimson)
 }
 
 h3 {
@@ -52,14 +51,20 @@ h3 {
     background-repeat: no-repeat;
 }
 
-#header-content {
+#header-content-main {
     display: flex;
     justify-content: space-around;
 }
 
+#header-content {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 2px gray;
+}
+
 #header-nav {
     background-color: white;
-    height: 50px;
+    height: 41px;
 }
 
 #letter-input {
@@ -68,6 +73,7 @@ h3 {
 
 #nav-ul {
     display: flex;
+    justify-content: center;
     text-align: center;
     margin: auto;
     margin-right: 0;
@@ -76,7 +82,8 @@ h3 {
 }
 
 #nav-ul li {
-    margin: 20px;
+    padding: 10px;
+    font-size: 18px;
 }
 
 #sentence-input {
@@ -106,6 +113,10 @@ h3 {
 .active {
     background-color: #433133 !important;
     color: white !important;
+}
+
+.active a {
+    color: white;
 }
 
 .banner-frame {
@@ -150,6 +161,12 @@ h3 {
     margin: auto;
 }
 
+.division-heading {
+    background-color: var(--background-sub-color);
+    margin: 0;
+    padding: 20px;
+}
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -177,7 +194,7 @@ h3 {
     width: 70%;
     padding: 20px;
     background-color: white;
-    box-shadow: 1px 1px 5px var(--highlight-color);
+    box-shadow: 0px 0px 5px var(--highlight-color);
 }
 
 .sound-table-header {

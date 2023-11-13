@@ -15,6 +15,7 @@ function generateTables() {
 
         const h2 = document.createElement("h2");
         h2.textContent = collectionOfTableNames[index];
+        h2.classList.add("division-heading");
         main.appendChild(h2);
 
         const tbl = document.createElement("table");

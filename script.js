@@ -94,13 +94,15 @@ function convertSentence() {
         else characters.push(word);
     });
 
-    let output = "";
+    let hiraganaOutput = "";
     characters.forEach( word => {
-        output += word;
+        hiraganaOutput += word;
     });
+    
+    let katakanaOutput = hiraganaToKatakana(hiraganaOutput);
 
     const result = document.querySelector("#sentence-output");
-    result.textContent = output;
+    result.textContent = "H " + hiraganaOutput + " - K " + katakanaOutput;
 }
 
 function drawRandomCharacter() {
@@ -122,12 +124,43 @@ function drawRandomCharacter() {
     randomSection.appendChild(randomCharacterElement);
 }
 
+function hiraganaToKatakana(sentence) {
+    let splitSentence = sentence.split("");
+    let characters = [];
+
+    splitSentence.forEach( word => {
+        let character = searchCharacterHiragana(word);
+        console.log(character + " " + word);
+        if (character !== "") characters.push(character.katakana);
+        else characters.push(word);
+    });
+
+    let output = "";
+    characters.forEach( word => {
+        output += word;
+    });
+    console.log(output);
+    return output;
+}
+
 function searchCharacter(value) {
     let searchedCharacter = "";
 
     collections.forEach( collection => {
         collection.forEach( character => {
             if (value === character.letter) searchedCharacter = character;
+        });
+    });
+
+    return searchedCharacter;
+}
+
+function searchCharacterHiragana(value) {
+    let searchedCharacter = "";
+
+    collections.forEach( collection => {
+        collection.forEach( character => {
+            if (value === character.hiragana) searchedCharacter = character;
         });
     });
 

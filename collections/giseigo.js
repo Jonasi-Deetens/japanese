@@ -1,74 +1,153 @@
-const giseigo = [
+const animalSounds = [
     {
         animal: "Bear",
-        hiragana: "がおー"
+        sound: "Roar",
+        hiragana: "がおー",
+        katakana: "ガオー"
     },
     {
         animal: "Bee",
-        hiragana: "ぶーん"
+        sound: "Buzz",
+        hiragana: "ぶーん",
+        katakana: "ブーン"
     },
     {
         animal: "Bird",
-        hiragana: "ちゅんちゅん"
+        sound: "Tweet",
+        hiragana: "ちゅんちゅん",
+        katakana: "チゅンチゅン"
     },
     {
         animal: "Cat",
-        hiragana: "にゃん"
+        sound: "Meow",
+        hiragana: "にゃん",
+        katakana: "ニゃン"
     },
     {
         animal: "Chicken",
-        hiragana: "こけこっこ"
+        sound: "Cluck",
+        hiragana: "こけこっこ",
+        katakana: "コケコっコ"
     },
     {
         animal: "Cow",
-        hiragana: "かーかー"
+        sound: "Moo",
+        hiragana: "かーかー",
+        katakana: "カーカー"
     },
     {
         animal: "Crow",
-        hiragana: "ぶーん"
+        sound: "Caw",
+        hiragana: "ぶーん",
+        katakana: "ブーン"
     },
     {
         animal: "Dog",
-        hiragana: "わんわん"
+        sound: "Woof",
+        hiragana: "わんわん",
+        katakana: "ワンワン"
     },
     {
         animal: "Duck",
-        hiragana: "がーがー"
+        sound: "Quack",
+        hiragana: "がーがー",
+        katakana: "ガーガー"
     },
     {
         animal: "Fox",
-        hiragana: "こんこん"
+        sound: "Sort of bark",
+        hiragana: "こんこん",
+        katakana: "コンコン"
     },
     {
         animal: "Frog",
-        hiragana: "げろげろ"
+        sound: "Croak, Ribbit",
+        hiragana: "げろげろ",
+        katakana: "ゲロゲロ"
     },
     {
         animal: "Godzilla",
-        hiragana: "がおー"
+        sound: "Roar",
+        hiragana: "がおー",
+        katakana: "ガオー"
     },
     {
         animal: "Horse",
-        hiragana: "ひひいん"
+        sound: "Neigh",
+        hiragana: "ひひいん",
+        katakana: "ヒヒイン"
     },
     {
         animal: "Monkey",
-        hiragana: "うきうき"
+        sound: "Oo oo aa aa",
+        hiragana: "うきうき",
+        katakana: "ウキウキ"
     },
     {
         animal: "Mouse",
-        hiragana: "ちゅーちゅー"
+        sound: "Squeak",
+        hiragana: "ちゅーちゅー",
+        katakana: "チゅーチゅー"
     },
     {
         animal: "Owl",
-        hiragana: "ほーほー"
+        sound: "Hoo",
+        hiragana: "ほーほー",
+        katakana: "ホーホー"
     },
     {
         animal: "Pig",
-        hiragana: "ぶーぶー"
+        sound: "Oink",
+        hiragana: "ぶーぶー",
+        katakana: "ブーブー"
     },
     {
         animal: "Sheep",
-        hiragana: "めーめー"
+        sound: "Meeeh, Baa",
+        hiragana: "めーめー",
+        katakana: "メーメー"
     }
-]
+];
+
+const humanSounds = [
+    {
+        sound: "Being lectured by someone above you",
+        hiragana: "がみがみ"
+    },
+    {
+        sound: "A cheerful, loud laugh",
+        hiragana: "あはは"
+    },
+    {
+        sound: "A child crying loudly",
+        hiragana: "うわーん"
+    },
+    {
+        sound: "A surprised scream or shriek",
+        hiragana: "うぎゃー"
+    },
+    {
+        sound: "Chuckling like you have a secret",
+        hiragana: "うふふ"
+    },
+    {
+        sound: "Chatting about frivolous things",
+        hiragana: "ぺちゃくちゃ"
+    },
+    {
+        sound: "Muttering so other people can't hear you",
+        hiragana: "ごにょごにょ"
+    },
+    {
+        sound: "Being able to speak a foreign language fluently",
+        hiragana: "ぺらぺら"
+    },
+    {
+        sound: "Clearing your throat for attention",
+        hiragana: "おほん"
+    },
+    {
+        sound: "Laughing quietly, unable to hold it in",
+        hiragana: "くすくす"
+    }
+];

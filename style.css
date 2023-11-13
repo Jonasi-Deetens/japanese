@@ -167,6 +167,11 @@ h3 {
     padding: 20px;
 }
 
+.explanation {
+    border: 2px solid var(--background-sub-color);
+    padding: 10px;
+}
+
 .flex-center {
     display: flex;
     justify-content: center;

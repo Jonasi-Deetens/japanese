@@ -22,6 +22,12 @@ function addListeners() {
     const newButton = document.querySelector("#new-button");
     newButton.addEventListener("click", drawRandomCharacter);
 
+    const letterInput = document.querySelector("#letter-input");
+    letterInput.addEventListener("keyup", (event) => {
+        if (event.code == "Enter") compareLetters();
+        if (event.code == "Space") drawRandomCharacter();
+    })
+
     const searchInput = document.querySelector("#search-input");
     searchInput.addEventListener("keyup", searchCharacterEvent)
 
@@ -106,6 +112,9 @@ function convertSentence() {
 }
 
 function drawRandomCharacter() {
+    const letterInput = document.querySelector("#letter-input");
+    letterInput.value = "";
+
     const result = document.querySelector(".result");
     result.textContent = "";
 
